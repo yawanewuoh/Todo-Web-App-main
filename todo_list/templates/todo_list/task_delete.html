@@ -1,0 +1,16 @@
+{% extends 'todo_list/main.html' %}
+
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'home' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        <p>Do you want to delete "{{tasks.title}}"?</p>
+            <input class="button" type="submit" value="delete" > 
+    </form>    
+</div>
+{% endblock content %}
+
