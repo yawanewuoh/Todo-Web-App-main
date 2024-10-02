@@ -129,6 +129,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # redirect the user after a successful login
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'index'
 #redirect the user if they are not authenticated and try to access a protected resource
 LOGIN_URL='login'

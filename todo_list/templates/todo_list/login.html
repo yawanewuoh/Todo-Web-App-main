@@ -1,6 +1,11 @@
 {% extends 'todo_list/main.html' %}
 
 {% block content %}
+
+{% for message in messages %}
+{{message}}
+{% endfor %}
+
 <div class="header-bar">
     <h1>Login Form</h1>
 </div>
@@ -8,7 +13,13 @@
 <div class="card-body">
     <form method="post">
         {% csrf_token %}
-        {{form.as_p}}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+        
+        <label>{{form.password1.label}}</label>
+        {{form.password}}
+        <br>
+
         <input class="button" type="submit" value="login">
     </form>
         

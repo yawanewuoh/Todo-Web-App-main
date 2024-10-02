@@ -1,6 +1,11 @@
 {% extends 'todo_list/main.html' %}
 
 {% block content %}
+
+{% for message in messages %}
+{{message}}
+{% endfor %}
+
 <div class="header-bar">
     <h1>Sign Up</h1>
 </div>

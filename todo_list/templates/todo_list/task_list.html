@@ -8,7 +8,7 @@
     </div>
         {% if request.user.is_authenticated %}
     <a href="">Subscribe PRO</a>
-    <h4>Your wallet balance: {{ wallet_balance }}</h4>
+    <!--<h4>Your wallet balance: {{ wallet_balance }}</h4>-->
 
     <a href="{% url 'logout' %}">Logout</a>
     {% else %}
@@ -44,8 +44,8 @@
         <h1>this list is empty</h1>
          {% endfor %}
 
-         <a href="/set_cookie">Accept cookie</a>
-         <a href="/get_cookie">Get cookie</a>
+      <!--   <a href="/set_cookie">Accept cookie</a>
+         <a href="/get_cookie">Get cookie</a>--> 
 
 </div>
 
