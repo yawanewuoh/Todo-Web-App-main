@@ -128,7 +128,7 @@ class TaskList(LoginRequiredMixin,ListView):
 class CreateTask(LoginRequiredMixin,CreateView):
     model=Task
     fields=['title','description','complete']
-    success_url=reverse_lazy('home')
+    success_url=reverse_lazy('index')
 
      # making changes to context
     def form_valid(self, form):
@@ -139,12 +139,12 @@ class CreateTask(LoginRequiredMixin,CreateView):
 class UpdateTask(LoginRequiredMixin,UpdateView):
     model=Task
     fields=['title','description','complete']
-    success_url=reverse_lazy('home')
+    success_url=reverse_lazy('index')
 
 class TaskDelete(LoginRequiredMixin,DeleteView):
     model=Task
     context_object_name='tasks'
     template_name='todo_list/task_delete.html'
-    success_url=reverse_lazy('home')
+    success_url=reverse_lazy('index')
     
 
